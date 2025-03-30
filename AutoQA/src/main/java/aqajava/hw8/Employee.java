@@ -9,12 +9,16 @@ package aqajava.hw8;
  */
 
 public class Employee {
-    private String fullName;
+    private final String fullName;
     private String position;
     private String email;
     private String phone;
     private int salary;
     private int age;
+
+    public int getAge() {
+        return age;
+    }
 
     public static void main(String[] args) {
         Employee[] employeeList = new Employee[5];
