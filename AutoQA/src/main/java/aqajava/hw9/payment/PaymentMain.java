@@ -21,8 +21,17 @@ public class PaymentMain {
         Payment payment3 = new Payment();
         Payment.Item item1 = payment3. new Item("paper", 1);
         Payment.Item item2 = payment3. new Item("board game", 56);
+        Payment.Item item3 = payment3. new Item("cup", 5);
         payment3.addItems(item1, 3);
         payment3.addItems(item2, 1);
+        payment3.addItems(item3, 1);
+
+        payment3.costDetails();
+
+        payment3.removeItems("paper");
+        payment3.costDetails();
+
+        payment3.removeItems(item3);
         payment3.costDetails();
     }
 }

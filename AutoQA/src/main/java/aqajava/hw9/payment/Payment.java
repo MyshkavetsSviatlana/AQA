@@ -29,6 +29,14 @@ public class Payment {
         items.add(item);
     }
 
+    public void removeItems(String name) {
+        items.removeIf(item -> item.getName().equals(name));
+    }
+
+    public void removeItems(Item itemToRemove) {
+        items.removeIf(item -> item == itemToRemove);
+    }
+
     public void costDetails() {
         int counter = 0;
         double totalCost = 0;
