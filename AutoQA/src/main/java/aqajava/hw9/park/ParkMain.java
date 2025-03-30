@@ -8,21 +8,21 @@ public class ParkMain {
         park1.addAttractions("Ferris Wheel", "Tu - Su, 11:00 - 20:00", 4.);
 
         // get full info on all attractions
-        park1.getFullInfoOnParkAttractions();
+        park1.getFullInfo();
 
         // get names of all park attractions
-        park1.getParkAttractionsNames();
+        park1.getNames();
 
         // get info on a particular attraction
-        park1.getParticularAttractionInfo("Ferris Wheel");
-        park1.getParticularAttractionInfo("Super 8");
+        park1.getAttractionInfo("Ferris Wheel");
+        park1.getAttractionInfo("Super 8");
 
         //get cost of a particular attraction
-        park1.getParticularAttractionCost("Kolobok");
-        park1.getParticularAttractionCost("Chains");
+        park1.getCost("Kolobok");
+        park1.getCost("Chains");
 
         // get working hours of a particular attraction
-        park1.getParticularAttractionHours("Ferris Wheel");
-        park1.getParticularAttractionHours("Race");
+        park1.getSchedule("Ferris Wheel");
+        park1.getSchedule("Race");
     }
 }

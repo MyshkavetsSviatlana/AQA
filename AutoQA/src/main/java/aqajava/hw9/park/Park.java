@@ -22,19 +22,19 @@ public class Park {
         parkAttractions.add(attraction);
     }
 
-    public void getFullInfoOnParkAttractions() {
+    public void getFullInfo() {
         for(Attraction attraction: parkAttractions) {
             System.out.println(attraction.toString());
         }
     }
 
-    public void getParkAttractionsNames(){
+    public void getNames(){
         for(Attraction attraction: parkAttractions) {
             System.out.println(attraction.getAttractionName());
         }
     }
 
-    public void getParticularAttractionInfo(String attractionName){
+    public void getAttractionInfo(String attractionName){
         for(Attraction attraction: parkAttractions) {
             attractionNames.add(attraction.attractionName);
             if (attraction.getAttractionName().equals(attractionName)) {
@@ -45,46 +45,46 @@ public class Park {
         }
         if(!attractionNames.contains(attractionName)) {
             System.out.println("There is no " + attractionName + " attraction in our park. Here is what we can offer you: ");
-            this.getFullInfoOnParkAttractions();
+            this.getFullInfo();
         }
     }
 
-    public void getParticularAttractionCost(String attractionName) {
+    public void getCost(String attractionName) {
         for(Attraction attraction: parkAttractions) {
             if(attraction.getAttractionName().equals(attractionName)) {
                 System.out.print("The cost of " + attractionName + " ride is ");
-                System.out.println(attraction.attractionCost + ".");
+                System.out.println(attraction.getAttractionCost() + ".");
                 break;
             }
         }
         if(!attractionNames.contains(attractionName)) {
             System.out.println("There is no " + attractionName + " attraction in our park. Here is what we can offer you: ");
-            this.getFullInfoOnParkAttractions();
+            this.getFullInfo();
         }
     }
 
-    public void getParticularAttractionHours(String attractionName) {
+    public void getSchedule(String attractionName) {
         for(Attraction attraction: parkAttractions) {
             if(attraction.getAttractionName().equals(attractionName)) {
                 System.out.print("The working hours of " + attractionName + " is ");
-                System.out.println(attraction.attractionWorkingHours + ".");
+                System.out.println(attraction.getAttractionSchedule() + ".");
                 break;
             }
         }
         if(!attractionNames.contains(attractionName)) {
             System.out.println("There is no " + attractionName + " attraction in our park. Here is what we can offer you: ");
-            this.getFullInfoOnParkAttractions();
+            this.getFullInfo();
         }
     }
 
     private class Attraction{
-        String attractionName;
-        String attractionWorkingHours;
+        private final String attractionName;
+        String attractionSchedule;
         double attractionCost;
 
         public Attraction(String attractionName, String attractionWorkingHours, double attractionCost) {
             this.attractionName = attractionName;
-            this.attractionWorkingHours = attractionWorkingHours;
+            this.attractionSchedule = attractionWorkingHours;
             this.attractionCost = attractionCost;
         }
 
@@ -92,8 +92,8 @@ public class Park {
             return attractionName;
         }
 
-        public String getAttractionWorkingHours() {
-            return attractionWorkingHours;
+        public String getAttractionSchedule() {
+            return attractionSchedule;
         }
 
         public double getAttractionCost() {
@@ -103,7 +103,7 @@ public class Park {
         @Override
         public String toString() {
             return "Attraction " + attractionName +
-                    ", Working hours: " + attractionWorkingHours +
+                    ", Working hours: " + attractionSchedule +
                     ", Cost: " + attractionCost;
         }
     }
