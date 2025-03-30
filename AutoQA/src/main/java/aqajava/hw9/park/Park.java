@@ -17,8 +17,9 @@ public class Park {
         this.parkName = parkName;
         this.address = address;
     }
-    public void addAttractions(String attractionName, String attractionWorkingHours, double attractionCost) {
-        Attraction attraction = new Attraction(attractionName, attractionWorkingHours, attractionCost);
+
+    public void addAttractions(String attractionName, String attractionWorkingHours, double attractionCost, String attractionPark) {
+        Attraction attraction = new Attraction(attractionName, attractionWorkingHours, attractionCost, attractionPark);
         parkAttractions.add(attraction);
     }
 
@@ -81,11 +82,13 @@ public class Park {
         private final String attractionName;
         String attractionSchedule;
         double attractionCost;
+        String park;
 
-        public Attraction(String attractionName, String attractionWorkingHours, double attractionCost) {
+        public Attraction(String attractionName, String attractionWorkingHours, double attractionCost, String park) {
             this.attractionName = attractionName;
             this.attractionSchedule = attractionWorkingHours;
             this.attractionCost = attractionCost;
+            this.park = park;
         }
 
         public String getAttractionName() {
@@ -104,7 +107,8 @@ public class Park {
         public String toString() {
             return "Attraction " + attractionName +
                     ", Working hours: " + attractionSchedule +
-                    ", Cost: " + attractionCost;
+                    ", Cost: " + attractionCost +
+                    ", Park: " + parkName;
         }
     }
 }

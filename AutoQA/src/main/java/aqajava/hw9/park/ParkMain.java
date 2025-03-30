@@ -3,9 +3,9 @@ package aqajava.hw9.park;
 public class ParkMain {
     public static void main(String[] args) {
         Park park1 = new Park("Gorky Park", "Chelyuskintsev subway station");
-        park1.addAttractions("Waltz", "We - Su, 11:00 - 19:00", 4.50);
-        park1.addAttractions("Kolobok", "We - Su, 10:00 - 19:00", 2.);
-        park1.addAttractions("Ferris Wheel", "Tu - Su, 11:00 - 20:00", 4.);
+        park1.addAttractions("Waltz", "We - Su, 11:00 - 19:00", 4.50, "Gorky Park");
+        park1.addAttractions("Kolobok", "We - Su, 10:00 - 19:00", 2., "Gorky Park");
+        park1.addAttractions("Ferris Wheel", "Tu - Su, 11:00 - 20:00", 4., "Gorky Park");
 
         // get full info on all attractions
         park1.getFullInfo();
