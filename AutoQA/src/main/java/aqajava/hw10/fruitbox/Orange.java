@@ -1,6 +1,6 @@
 package aqajava.hw10.fruitbox;
 
-public class Orange extends Fruit{
+public class Orange extends Fruit {
     static float weight = 0.5f;
     String fruitName = "orange";
 

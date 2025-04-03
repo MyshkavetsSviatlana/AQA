@@ -7,7 +7,7 @@ public class FruitBoxApp {
 
         // create a box of 10 apples
         Box<Apple> appleBox = new Box<>();
-        for(int i = 0; i<10; i++) {
+        for (int i = 0; i < 10; i++) {
             appleBox.addElement(apple);
         }
 

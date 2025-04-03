@@ -17,7 +17,7 @@ should be empty after the transfer, and the other box should receive the objects
 7. Don't forget about the method to add a fruit to the box.
  */
 
-public class Fruit {
+abstract class Fruit {
     float weight;
     String fruitName;
 
