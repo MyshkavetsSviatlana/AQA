@@ -43,7 +43,7 @@ public class Box <T extends Fruit>{
     public void transfer(Box<T> boxToTransferTo) {
         if(this.box.isEmpty()){
             System.out.println("No fruits to transfer.");
-        }else if(this.getFruit().getFruitName().equals(boxToTransferTo.getFruit().getFruitName())) {
+        } else if(this.getFruit().getFruitName().equals(boxToTransferTo.getFruit().getFruitName())) {
             boxToTransferTo.box.addAll(this.box);
             box.clear();
         }
