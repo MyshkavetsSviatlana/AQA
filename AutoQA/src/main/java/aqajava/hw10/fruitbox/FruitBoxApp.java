@@ -23,21 +23,27 @@ public class FruitBoxApp {
         orangeBox2.addElement(orange);
         orangeBox2.addElement(orange);
 
+        // get weight of the box
         System.out.println(appleBox.getWeight());
         System.out.println(orangeBox2.getWeight());
 
+        //print contents
         appleBox.printBoxContent();
         orangeBox.printBoxContent();
 
+        // compare false
         System.out.println(appleBox.compare(appleBox2));
+        //compare true
         System.out.println(appleBox.compare(orangeBox));
 
+        // transfer successfully
         appleBox2.printBoxContent();
-        appleBox.transfer(appleBox2);
-        appleBox2.printBoxContent();
+        appleBox2.transfer(appleBox);
         appleBox.printBoxContent();
+        appleBox2.printBoxContent();
 
-        appleBox2.transfer(orangeBox);
-        orangeBox.transfer(appleBox);
+        // transfer unsuccessfully
+        appleBox2.transfer(appleBox);
+        orangeBox.transfer(orangeBox2);
     }
 }
