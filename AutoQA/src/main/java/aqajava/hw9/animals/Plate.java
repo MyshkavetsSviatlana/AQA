@@ -18,16 +18,18 @@ public class Plate {
     }
 
     public void decreaseFood(int n) {
-        if(this.food < n) {
+        if (this.food < n) {
             System.out.println("There is not enough food on the plate.");
-        } else {this.food -= n;}
+        } else {
+            this.food -= n;
+        }
     }
 
     public void addFood(int n) {
         int placeLeft = this.fullPlate - this.food;
         System.out.println("Adding " + n + " of food.");
-        if(placeLeft >= n) {
-            this.food +=n;
+        if (placeLeft >= n) {
+            this.food += n;
             System.out.println("Amount of food added: " + n);
         } else {
             System.out.println("There is no place enough in this plate. You can add " + placeLeft + " only.");
