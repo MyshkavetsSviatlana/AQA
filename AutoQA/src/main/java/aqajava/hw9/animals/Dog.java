@@ -2,40 +2,39 @@ package aqajava.hw9.animals;
 
 public class Dog extends Animal {
     private final String name;
-    final int runningDistance = 500;
-    final int swimmingDistance = 10;
+    private static final int MAX_RUNNING_DISTANCE = 500;
+    private static final int MAX_SWIMMING_DISTANCE = 10;
     static int dogCounter = 0;
 
     public Dog(String name) {
+        super(name);
         this.name = name;
-        dogCounter +=1;
+        dogCounter += 1;
     }
 
     public void getDogCounter() {
-        System.out.println("Total number of dogs: "+ dogCounter);
+        System.out.println("Total number of dogs: " + dogCounter);
     }
 
     @Override
     public void run(int distance) {
-        if(distance > runningDistance) {
-            System.out.println("Dogs cannot run further than " + runningDistance + " meters.");
-        } else if(distance <=0) {
+        if (distance > MAX_RUNNING_DISTANCE) {
+            System.out.println("Dogs cannot run further than " + MAX_RUNNING_DISTANCE + " meters.");
+        } else if (distance <= 0) {
             System.out.println("Distance for " + this.name + " to run should be greater than 0.");
         } else {
-            System.out.print(this.name);
-            super.run(distance);
+            System.out.println(this.name + " ran " + distance + " meters.");
         }
     }
 
     @Override
     public void swim(int distance) {
-        if(distance > swimmingDistance) {
-            System.out.println("Dogs cannot swim further than " + swimmingDistance + " meters.");
-        } else if(distance <= 0) {
+        if (distance > MAX_SWIMMING_DISTANCE) {
+            System.out.println("Dogs cannot swim further than " + MAX_SWIMMING_DISTANCE + " meters.");
+        } else if (distance <= 0) {
             System.out.println("Distance for " + this.name + " to swim should be greater than 0.");
         } else {
-            System.out.print(this.name);
-            super.swim(distance);
+            System.out.println(this.name + " swam " + distance + " meters.");
         }
     }
 }

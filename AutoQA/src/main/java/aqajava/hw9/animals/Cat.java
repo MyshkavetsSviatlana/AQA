@@ -1,13 +1,14 @@
 package aqajava.hw9.animals;
 
 public class Cat extends Animal {
-    private final  String name;
+    private final String name;
     private final int appetite;
     boolean fullness;
-    final int runningDistance = 200;
+    private static final int MAX_RUNNING_DISTANCE = 200;
     static int catCounter = 0;
 
     public Cat(String name, int appetite) {
+        super(name);
         this.name = name;
         this.appetite = appetite;
         this.fullness = false;
@@ -32,13 +33,12 @@ public class Cat extends Animal {
 
     @Override
     public void run(int distance) {
-        if (distance > runningDistance) {
-            System.out.println("Cats cannot run further than " + runningDistance + " meters.");
+        if (distance > MAX_RUNNING_DISTANCE) {
+            System.out.println("Cats cannot run further than " + MAX_RUNNING_DISTANCE + " meters.");
         } else if (distance <= 0) {
             System.out.println("Distance for " + this.name + " to run should be greater than 0.");
         } else {
-            System.out.print(this.name);
-            super.run(distance);
+            System.out.println(this.name + " ran " + distance + " meters.");
         }
     }
 
@@ -48,7 +48,7 @@ public class Cat extends Animal {
     }
 
     public void eat(Plate plate) {
-        if(plate.getFullness() > this.appetite) {
+        if (plate.getFullness() > this.appetite) {
             plate.decreaseFood(appetite);
             System.out.println(this.name + " is eating.");
             this.fullness = true;

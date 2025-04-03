@@ -1,11 +1,15 @@
 package aqajava.hw9.animals;
 
-public class Animal {
+abstract class Animal {
+    static int animalCount = 0;
+    String name;
 
-    public void run(int distance) {
-        System.out.println(" ran " + distance + " meters.");
+    public Animal(String name) {
+        this.name = name;
+        animalCount++;
     }
-    public void swim(int distance) {
-        System.out.println(" swam " + distance + " meters.");
-    }
+
+    public abstract void run(int distance);
+
+    public abstract void swim(int distance);
 }
