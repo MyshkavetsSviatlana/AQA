@@ -8,7 +8,7 @@ at specified indices
 
 import java.util.Arrays;
 
-public class SwapElements{
+public class SwapElements {
 
     public static <T> void swapTwoElements(T[] array, int ind1, int ind2) {
         try {
@@ -17,11 +17,11 @@ public class SwapElements{
             array[ind1] = b;
             array[ind2] = a;
             System.out.println(Arrays.toString(array));
-        } catch(ArrayIndexOutOfBoundsException e) {
-            if(array.length < 2) {
+        } catch (ArrayIndexOutOfBoundsException e) {
+            if (array.length < 2) {
                 System.out.println("Make sure that minimum array length is 2.");
             } else {
-                System.out.println("Maximum index cannot be greater than " + (array.length-1) + ".");
+                System.out.println("Maximum index cannot be greater than " + (array.length - 1) + ".");
             }
         }
     }
