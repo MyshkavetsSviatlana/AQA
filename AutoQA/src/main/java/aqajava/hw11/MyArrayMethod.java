@@ -13,7 +13,7 @@ MyArrayDataException exceptions, and display the calculation result.
 
 public class MyArrayMethod {
     public static int sumArrayElements(String[][] twoDArray) throws MyArraySizeException, MyArrayDataException {
-        if (twoDArray.length != 4 | twoDArray[0].length != 4) {
+        if (twoDArray.length != 4 || twoDArray[0].length != 4 || twoDArray[1].length != 1 || twoDArray[2].length != 4 || twoDArray[3].length != 4) {
             throw new MyArraySizeException();
         } else {
             int result = 0;
