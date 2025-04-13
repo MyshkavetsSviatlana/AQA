@@ -1,6 +1,10 @@
 package aqajava.hw13;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Set;
+import java.util.HashSet;
 
 public class CollectionExample {
     public static void main(String[] args) {
