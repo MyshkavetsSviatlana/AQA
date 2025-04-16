@@ -10,6 +10,7 @@ public class Loop3 {
             if (number < 5) {
                 number = 0;
             }
+            // infinite loop <= always true, no point of breaking out of the loop
         } while (true);
     }
 }
